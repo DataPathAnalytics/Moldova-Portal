@@ -1,0 +1,119 @@
+// style for line chart in homepage
+.axis path, .axis line {
+  fill: none;
+  stroke: lightgrey;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-size: 13px;
+  line-height: 19px;
+  fill: $lighter-grey-color;
+}
+
+.line {
+  stroke: $lighter-grey-color;
+  fill: none;
+  stroke-width: 0.75px;
+}
+
+.line.line5 {
+  stroke: red;
+}
+
+.grid .tick {
+  stroke: lightgrey;
+  opacity: 0.7;
+}
+
+.grid {
+  stroke-width: 0.4px;
+}
+
+.top {
+  z-index: 1000;
+}
+
+// styling for barchart of procuring
+.chart rect, rect {
+  fill: $deep-yellow-color;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    fill: darken($deep-yellow-color, 6%);
+
+  }
+}
+
+.chart {
+  text {
+    fill: $darker-grey-color;
+    font-size: 1rem;
+    line-height: 1.375rem;
+
+    &.value {
+      fill: $darker-grey-color;
+      cursor: pointer;
+    }
+  }
+}
+
+.name {
+  cursor: pointer;
+}
+
+circle {
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+/*style for tooltip*/
+
+#main-content {
+  position: relative;
+}
+
+#tooltip-wrap, #tooltip-no-tip {
+  position: absolute;
+
+}
+
+#tooltip-wrap p, #tooltip-no-tip p {
+  margin-left: -50%;
+  display: inline-block;
+  top: -54px;
+  position: relative;
+  text-align: center;
+    height: auto;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  color: #fff;
+  z-index: 99;
+  font-size: 14px;
+  line-height: 20px;
+
+}
+
+#tooltip-wrap p {
+  &:before {
+    content: "";
+    position: absolute;
+    border: solid;
+    border-color: rgba(0, 0, 0, 0.6) transparent;
+    border-width: 10px 10px 0 10px;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+        z-index: 99;
+  }
+
+}
+
+.verticalBar-value {
+  //display: none;
+  fill: #4A4A4A;
+}
+
+

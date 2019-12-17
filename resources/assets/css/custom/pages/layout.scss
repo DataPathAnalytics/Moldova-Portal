@@ -1,0 +1,310 @@
+.login-bar{
+  background-color: #333;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.top-bar ul.user-menu{
+  float: right;
+  background: none;
+  .user-logo{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 0 !important;
+    background: #fff url(#{$img-path}/ic_user.svg) center no-repeat;
+    background-size: 14px 14px;
+    &:after{
+      content: none !important;
+    }
+  }
+
+  .logout.menu{
+    right: 0px;
+    left: auto;
+    min-width: 110px;
+    padding-top: 10px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    background: #333;
+    border: none;
+
+    a{
+      padding: 10px 14px;
+      color: #fff;
+    }
+  }
+
+}
+
+.add-transform{
+  transform: translateY(-44px);
+  transition: all 0.3s ease;
+}
+
+.disapper{
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.reduce-padding{
+  padding-top: 76px;
+}
+
+
+.burger-menu-button{
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background: transparent;
+  padding: 0;
+  display: none;
+}
+
+header{
+  z-index: 888;
+  &.top-bar{
+    padding: 0;
+  }
+}
+
+.main-menu-wrap{
+  padding: 0.5em 0;
+  background: $link-color-blue;
+}
+
+.header-banner .main-menu-wrap{
+  background: transparent;
+}
+
+.fixed-header{
+  position: fixed;
+  width: 100%;
+  width: 100vw;
+  top: 0;
+}
+
+.project-logo{
+  text-transform: uppercase;
+  margin: 0.5rem 1rem;
+  width: auto;
+  display: inline-block;
+
+  //margin: 0.25rem 1rem;
+  .first-section{
+    color: #fff;
+  }
+
+  .second-section{
+    color: rgba(255,255,255,0.5);
+  }
+}
+
+.main-content{
+  padding-top: 76px;
+}
+
+
+.top-bar-right{
+  .menu{
+    padding-right: 50px;
+  }
+}
+
+.toggle-visibility,.toggle-visibility-small{
+  visibility: hidden;
+}
+
+@media (max-width: 40em){
+  .main-content {
+    padding-top: 61px;
+  }
+}
+
+@media (min-width: 1270px) {
+  .top-bar-right {
+
+    .menu {
+      display: block !important;
+      background: none;
+      margin-top: -0.5rem;
+      margin-bottom: -0.5rem;
+
+      li {
+        margin-left: 2px;
+        display: inline-block;
+      }
+    }
+
+    .menu > li:not(.menu-text) > a {
+      padding: 24px 0.5rem;
+    }
+
+    li a {
+      color: rgba(255, 255, 255, 0.5);
+      border-top: solid 4px transparent;
+
+      &:hover {
+        border-top: solid 4px $deep-yellow-color;
+      }
+
+      &.active {
+        color: #fff;
+        border-top: solid 4px $deep-yellow-color;
+      }
+
+    }
+  }
+
+}
+
+@media (min-width: 40em){
+  .menu > li:not(.menu-text) > a {
+    padding: 15px 0.8rem;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@media (min-width: 60em) {
+  .menu > li:not(.menu-text) > a {
+    padding: 18px 1.5rem;
+  }
+}
+
+
+
+
+/*style for burger menu*/
+
+.burger-menu {
+  position: relative;
+  height: 58px;
+  //width: 50px;
+  width: 36px;
+  cursor: pointer;
+  padding: 0;
+}
+.burger {
+  position: absolute;
+  background: #fff;
+  width: 30px;
+  height: 3px;
+  top: 27px;
+  //right: 9px;
+  right: 0;
+  opacity: 1;
+}
+.burger::before {
+  position: absolute;
+  background: #fff;
+  width: 30px;
+  height: 3px;
+  top: 10px;
+  content: "";
+  display: block;
+}
+.burger::after {
+  position: absolute;
+  background: #fff;
+  width: 30px;
+  height: 3px;
+  bottom: 10px;
+  content: "";
+  display: block;
+}
+
+
+.burger::after, .burger::before, .burger {
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+}
+.burger-menu.menu-on .burger::after{
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  bottom: 0px;
+}
+.burger-menu.menu-on .burger::before{
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  top: 0px;
+}
+.burger-menu.menu-on .burger{
+  background: rgba(111,111,111,.0);
+}
+
+footer{
+  background-color: $light-grey-color;
+  padding: 25px 30px;
+
+  .project-logo {
+    margin: 0.5rem 0;
+  }
+
+  .top-bar-right{
+    .first-section{
+
+    }
+
+    .second-section{
+      color: rgba(255,255,255,0.5);
+    }
+  }
+
+  form{
+    min-width: 415px;
+  }
+}
+
+@media (max-width: 650px){
+  footer {
+    padding: 15px 20px;
+
+    form{
+      min-width: 100%;
+    }
+
+    .suscribe-input{
+      input{
+        min-height: 39px;
+      }
+    }
+
+    .left-content, .right-content {
+      float: none;
+      display: block;
+      width: 100%;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+      clear: both;
+      overflow: hidden;
+    }
+
+    .project-logo {
+      margin: 0rem 0rem;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .burger{
+    width: 22px;
+    height: 2px;
+    top: 29px;
+
+    &:before{
+      width: 22px;
+      height: 2px;
+      top: 8px;
+    }
+
+    &:after{
+      width: 22px;
+      height: 2px;
+      bottom: 8px;
+    }
+  }
+}
+
+

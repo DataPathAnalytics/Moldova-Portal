@@ -1,0 +1,132 @@
+/* Sweep To Right */
+.hvr-sweep-to-right{
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s;
+
+  &:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $deep-yellow-color;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover,&:focus,&:active{
+    color: $dark-grey-yellow-color;
+  }
+
+  &:hover:before,&:focus:before,&:active:before{
+    background: $deep-yellow-color;
+    transform: scaleX(1);
+  }
+}
+
+
+/* ------- style for loader ------- */
+
+.dataTables_processing:after {
+  content: "";
+  width: 36px;
+  height: 36px;
+  background: $deep-yellow-color;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  margin-left: -18px;
+  top: 50%;
+  margin-top: -18px;
+  transform: translateY(50%);
+  -webkit-animation: square-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+  animation: square-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite
+}
+
+@-webkit-keyframes square-spin {
+  25% {
+    -webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);
+    transform: perspective(100px) rotateX(180deg) rotateY(0)
+  }
+  50% {
+    -webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+    transform: perspective(100px) rotateX(180deg) rotateY(180deg)
+  }
+  75% {
+    -webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);
+    transform: perspective(100px) rotateX(0) rotateY(180deg)
+  }
+  100% {
+    -webkit-transform: perspective(100px) rotateX(0) rotateY(0);
+    transform: perspective(100px) rotateX(0) rotateY(0)
+  }
+}
+
+/*animation for loader*/
+
+/* change font size to change size */
+
+.loader-text {
+  /*font-size: 20px;
+  position: relative;
+  width: 4em;
+  height: 1em;
+  margin: 100px auto;*/
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(72, 72, 72, 0.4);
+  position: absolute;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.dot1, .dot2 {
+  left: 0;
+}
+
+.dot3 { left: 8px; }
+
+.dot4 { left: 16px }
+
+@keyframes reveal {
+  from { transform: scale(0.001); }
+  to { transform: scale(1); }
+}
+
+@keyframes slide {
+  to { transform: translateX(8px) }
+}
+
+
+.dot1 {
+  animation-name: reveal;
+}
+
+.dot2, .dot3 {
+  animation-name: slide;
+}
+
+.dot4 {
+  animation-name: reveal;
+  animation-direction: reverse; /* thx @HugoGiraudel */
+}
+
+

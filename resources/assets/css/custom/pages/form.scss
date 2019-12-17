@@ -1,0 +1,160 @@
+.background{
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+
+  .custom-form{
+    padding-bottom: 40px;
+  }
+
+  .form-group .form-control {
+    color: #fff;
+    text-align: left;
+    border-bottom: 3px solid #fff;
+    //padding-left: 0;
+    height: auto;
+    background: transparent !important;
+  }
+  .button {
+    background: rgba(20, 83, 179, 0.65);
+    display: block;
+    width: 50%;
+    font-size: 13px;
+    color: #fff;
+    border-radius: 0;
+    padding: 15px 10px;
+    margin: 0 auto 20px auto;
+    border-bottom: 2px solid rgb(255, 210, 0);
+    &:hover{
+      color: #fff;
+      background: rgba(37, 70, 130, 0.76);
+    }
+  }
+}
+.formBox{
+  margin: 40px 20px 20px;
+}
+
+.bold{
+  font-weight: bold;
+}
+.contactTitle{
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+#ajaxResponse{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+  outline: 0;
+
+  .control-label {
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 18px;
+    margin-bottom: 6px;
+  }
+  .form-control {
+    border: none;
+    font-size: 13px;
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+}
+
+.background{
+  ::-webkit-input-placeholder {
+    color: #fff;
+  }
+  ::-moz-placeholder {
+    color: #fff;
+  }
+  :-ms-input-placeholder {
+    color: #fff;
+  }
+  :-moz-placeholder {
+    color: #fff;
+  }
+}
+
+.ocdsAddress {
+   padding-left: 50px;
+   padding-top: 60px;
+   font-size: 20px;
+   text-transform: uppercase;
+ }
+
+.cs-skin-elastic.cs-active .cs-options ul li{
+  &:hover{
+    background-color: #f2f2f2;
+  }
+}
+
+.cs-select .cs-options{
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+  border-radius: 0 0 2px 2px;
+}
+
+
+@media (max-width: 768px){
+  .background{
+    &.medium-5 {
+      width: 100%;
+      float: none;
+    }
+  }
+
+  .ocdsAddress.medium-7{
+    width: 100%;
+    float: none;
+  }
+}
+
+/* ---------- style for select2 section --------- */
+
+form{
+  .select2-container{
+    width: 100% !important;
+  }
+
+  .select2-container .select2-selection--single{
+    height: auto;
+  }
+
+  .select2-selection__rendered{
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  input[name = "startDate"], input[name = "endDate"]{
+    border-radius: 4px;
+    color: $light-grey-color;
+  }
+}
+
+.select2-results__option[aria-disabled="true"]{
+  display: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  color: $light-grey-color;
+}
+
+
+/* --------- style for datepicker ------- */
+
+
+
+.fi-arrow-left:before{
+  content: "<";
+}
+
+.fi-arrow-right:before{
+  content: ">";
+}
