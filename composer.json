@@ -11,7 +11,7 @@
     "php": ">=5.5.9",
     "laravel/framework": "5.2.*",
     "vlucas/phpdotenv": "~2.2",
-    "guzzlehttp/guzzle": "5.3",
+    "guzzlehttp/guzzle": "6.5.8",
     "godpod/sendgrid": "2.2.0.1",
     "nuovo/spreadsheet-reader": "^0.5.11",
     "jenssegers/mongodb": "3.2.*",
